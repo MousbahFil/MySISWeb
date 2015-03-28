@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/root/!svn/ver/13/MySISWeb/src/main/java/com/mousbah/mysis/web/client
+END
+GWTCourse.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/root/!svn/ver/13/MySISWeb/src/main/java/com/mousbah/mysis/web/client/GWTCourse.java
+END
+GWTUser.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/root/!svn/ver/13/MySISWeb/src/main/java/com/mousbah/mysis/web/client/GWTUser.java
+END
+UserInseter.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/root/!svn/ver/13/MySISWeb/src/main/java/com/mousbah/mysis/web/client/UserInseter.java
+END
+HistoryTokens.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/root/!svn/ver/13/MySISWeb/src/main/java/com/mousbah/mysis/web/client/HistoryTokens.java
+END
+ConfirmationDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/root/!svn/ver/13/MySISWeb/src/main/java/com/mousbah/mysis/web/client/ConfirmationDialog.java
+END
+UserInseterAsync.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/root/!svn/ver/13/MySISWeb/src/main/java/com/mousbah/mysis/web/client/UserInseterAsync.java
+END
+HomeScreen.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/root/!svn/ver/13/MySISWeb/src/main/java/com/mousbah/mysis/web/client/HomeScreen.java
+END
+AdministrationScreen.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/root/!svn/ver/13/MySISWeb/src/main/java/com/mousbah/mysis/web/client/AdministrationScreen.java
+END
+GWTStudent.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/root/!svn/ver/13/MySISWeb/src/main/java/com/mousbah/mysis/web/client/GWTStudent.java
+END
+UserCreationScreen.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/root/!svn/ver/13/MySISWeb/src/main/java/com/mousbah/mysis/web/client/UserCreationScreen.java
+END
+LoginScreen.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/root/!svn/ver/13/MySISWeb/src/main/java/com/mousbah/mysis/web/client/LoginScreen.java
+END
+MySISWebEntryPoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/root/!svn/ver/13/MySISWeb/src/main/java/com/mousbah/mysis/web/client/MySISWebEntryPoint.java
+END

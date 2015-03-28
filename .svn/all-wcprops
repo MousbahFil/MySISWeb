@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/root/!svn/ver/12/MySISWeb
+END
+MySISWebTest-prod.launch
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/root/!svn/ver/13/MySISWeb/MySISWebTest-prod.launch
+END
+MySISWebTest-dev.launch
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/root/!svn/ver/13/MySISWeb/MySISWebTest-dev.launch
+END
+pom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/root/!svn/ver/13/MySISWeb/pom.xml
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/root/!svn/ver/13/MySISWeb/.project
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/root/!svn/ver/13/MySISWeb/.classpath
+END

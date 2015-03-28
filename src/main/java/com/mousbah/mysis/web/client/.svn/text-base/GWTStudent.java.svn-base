@@ -1,0 +1,36 @@
+package com.mousbah.mysis.web.client;
+
+import java.io.Serializable;
+
+ 
+
+public class GWTStudent implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	private int id;
+	private double cumulativeGpa;
+	
+	public GWTStudent() {
+		super();
+	}
+
+	
+	public double getCumulativeGpa() {
+		return cumulativeGpa;
+	}
+
+	public void setCumulativeGpa(double cumulativeGpa) {
+		this.cumulativeGpa = cumulativeGpa;
+	}
+
+	
+	public int getId() {
+		return id;
+	}
+ 
+	public void setId(int id) {
+		this.id = id;
+	} 
+	
+
+}

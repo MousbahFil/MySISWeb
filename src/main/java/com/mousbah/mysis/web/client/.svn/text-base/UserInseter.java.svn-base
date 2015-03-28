@@ -1,0 +1,29 @@
+package com.mousbah.mysis.web.client;
+
+import java.util.List;
+
+import com.google.gwt.user.client.rpc.RemoteService;
+import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
+
+
+@RemoteServiceRelativePath("userInseter")
+public interface UserInseter extends RemoteService {
+	void insertUser(GWTUser user) throws Exception;
+	
+	boolean validateUser(String userName, String password) throws Exception;
+	
+	List<GWTUser> getAllUsers() throws Exception;
+	
+	List<GWTCourse> getRegisteredCourses(GWTStudent student) throws Exception;
+	
+	 GWTUser getUser(String userName) throws Exception;
+	 
+	 public GWTStudent getStudentfromUser(GWTUser user) throws Exception;
+	 
+	 public GWTCourse getCourseByCrn(int crn) throws Exception;
+	 
+	 public void registerStudentInCourse(GWTStudent student , GWTCourse course) throws Exception;
+	 
+	 public void dropStudentfromCourse(GWTStudent student , GWTCourse course) throws Exception;
+}
+ 

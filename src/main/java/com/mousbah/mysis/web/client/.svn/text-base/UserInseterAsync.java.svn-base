@@ -1,0 +1,29 @@
+package com.mousbah.mysis.web.client;
+
+import java.util.List;
+
+import com.google.gwt.user.client.rpc.AsyncCallback;
+
+/**
+ * The async counterpart of <code>UserInseter</code>.
+ */
+public interface UserInseterAsync {
+	void insertUser(GWTUser user, AsyncCallback<Void> callback);
+
+	void validateUser(String userName, String password, AsyncCallback<Boolean> callback);
+
+	void getAllUsers(AsyncCallback<List<GWTUser>> callback);
+
+	void getRegisteredCourses(GWTStudent student,AsyncCallback<List<GWTCourse>> callback);
+
+	void getUser(String userName, AsyncCallback<GWTUser> callback);
+
+	void getStudentfromUser(GWTUser user, AsyncCallback<GWTStudent> callback);
+
+	void getCourseByCrn(int crn, AsyncCallback<GWTCourse> callback);
+
+	void registerStudentInCourse(GWTStudent student, GWTCourse course,AsyncCallback<Void> callback);
+
+	void dropStudentfromCourse(GWTStudent student, GWTCourse course,AsyncCallback<Void> callback);
+}
+ 

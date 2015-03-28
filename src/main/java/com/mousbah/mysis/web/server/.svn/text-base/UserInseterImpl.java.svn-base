@@ -1,0 +1,82 @@
+package com.mousbah.mysis.web.server;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+import com.mousbah.database.service.DatabaseServiceFactory;
+import com.mousbah.database.service.tables.Course;
+import com.mousbah.database.service.tables.Student;
+import com.mousbah.database.service.tables.User;
+import com.mousbah.mysis.web.client.GWTCourse;
+import com.mousbah.mysis.web.client.GWTStudent;
+import com.mousbah.mysis.web.client.GWTUser;
+import com.mousbah.mysis.web.client.UserInseter;
+
+/**
+ * The server side implementation of the RPC service.
+ */
+@SuppressWarnings("serial")
+public class UserInseterImpl extends RemoteServiceServlet implements UserInseter {
+
+	private static final DatabaseServiceFactory factory=DatabaseServiceFactory.newInstance();
+
+
+	public void insertUser(GWTUser user) throws Exception {
+		User finalUser = Adapters.adaptUser(user);
+		factory.createUserAdminService().insertUser(finalUser);
+	}
+	
+	public boolean validateUser(String userName, String password) throws Exception {
+		return factory.createUserAdminService().authenticateUser(userName, password);
+	}
+	
+	
+	
+	public List<GWTUser> getAllUsers() throws Exception {
+		List<User> actualUsers =factory.createUserAdminService().getRegisteredUsers();
+		List<GWTUser> adaptedUsers = new ArrayList<GWTUser>();
+		for(User user: actualUsers){
+			adaptedUsers.add(Adapters.adaptUser(user));
+		}
+		return adaptedUsers;
+	}
+
+	public List<GWTCourse> getRegisteredCourses(GWTStudent student) throws Exception {
+		Student adaptedStudent=Adapters.adaptStudent(student);
+		List<Course> courses =factory.createStudentRepositoryService().getRegisteredCourses(adaptedStudent);
+		List<GWTCourse> adaptedCourses=new ArrayList<GWTCourse>();
+		for(Course course: courses){
+			adaptedCourses.add(Adapters.adaptCourse(course));
+		}
+		return adaptedCourses;
+	}
+
+	public GWTUser getUser(String userName) throws Exception {
+		return Adapters.adaptUser(factory.createUserAdminService().getUser(userName));
+	}
+
+	public GWTStudent getStudentfromUser(GWTUser user) throws Exception {
+		return Adapters.adaptStudent(factory.createStudentRepositoryService().getStudentfromUser(Adapters.adaptUser(user)));
+	}
+
+	public GWTCourse getCourseByCrn(int crn) throws Exception {
+		return Adapters.adaptCourse(factory.createCourseRepositoryService().getCourseByCrn(crn));
+	}
+
+	public void registerStudentInCourse(GWTStudent student, GWTCourse course)throws Exception {
+		Student adaptedStudent=Adapters.adaptStudent(student);
+		Course adaptedCourse=Adapters.adaptCourse(course);
+		factory.createStudentRepositoryService().registerStudentInCourse(adaptedStudent, adaptedCourse);
+		
+	}
+
+	public void dropStudentfromCourse(GWTStudent student, GWTCourse course)throws Exception {
+		Student finalStudent=Adapters.adaptStudent(student);
+		Course finalCourse=Adapters.adaptCourse(course);
+		factory.createStudentRepositoryService().dropStudentfromCourse(finalStudent, finalCourse);
+	}
+	
+
+	
+}

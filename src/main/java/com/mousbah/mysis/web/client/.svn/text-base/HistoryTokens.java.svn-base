@@ -1,0 +1,17 @@
+package com.mousbah.mysis.web.client;
+
+public enum HistoryTokens {
+
+	LOGIN("Login"),USER_CREATION("User Creation"), HOME_SCREEN("History Screen");
+	
+	private String value;
+
+	public String getValue() {
+		return value;
+	}
+
+	private HistoryTokens(String value) {
+		this.value = value;
+	}
+	
+}
